@@ -1,0 +1,8 @@
+cnocr 初次使用时的注意事项
+在使用python语言的cnocr时 出现了一个错误提示  File "cnocr\utils.py", line 183, in download raise RuntimeError("Failed downloading url %s" % url) RuntimeError: Failed downloading url https://huggingface.co/breezedeus/cnstd-cnocr-models/resolve/main/models/cnocr/2.2/densenet_lite_136-fc-onnx.zip
+根据CnOCR的使用说明，首次使用CnOCR时，系统会自动下载zip格式的模型压缩文件，并存于~/.cnocr目录（Windows下默认路径为C:\Users\<username>\AppData\Roaming\cnocr）。下载后的zip文件代码会自动对其解压，然后把解压后的模型相关目录放于~/.cnocr/2.2目录中。
+如果系统无法自动成功下载zip文件，则需要手动从cnstd-cnocr-models下载此zip文件并把它放于~/.cnocr/2.2目录。
+
+有两个文件:
+C:\Users\<username>\AppData\Roaming\cnocr\2.2\densenet_lite_136-fc	   这是一个文件夹,里面有对应的文件
+C:\Users\<username>\AppData\Roaming\cnstd\1.2\ppocr\ch_PP-OCRv3_det_infer.onnx
